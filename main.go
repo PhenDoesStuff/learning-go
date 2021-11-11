@@ -3,9 +3,10 @@ package main
 import "log"
 
 func main() {
-	myMap := make(map[string]string)
+	myMap := make(map[string]int)
 
-	myMap["dog"] = "Pocus"
+	myMap["First"] = 1
+	myMap["Second"] = 2
 
-	log.Println(myMap["dog"])
+	log.Println(myMap["First"], myMap["Second"])
 }
