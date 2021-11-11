@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"log"
+	"sort"
+)
 
 func main() {
 	var mySlice []int
@@ -8,6 +11,10 @@ func main() {
 	mySlice = append(mySlice, 5)
 	mySlice = append(mySlice, 1)
 	mySlice = append(mySlice, 3)
+
+	log.Println(mySlice)
+
+	sort.Ints(mySlice)
 
 	log.Println(mySlice)
 }
