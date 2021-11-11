@@ -3,10 +3,11 @@ package main
 import "log"
 
 func main() {
-	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	isTrue := true
 
-	log.Println(numbers)
-
-	log.Println(numbers[0:2])
-	log.Println(numbers[6:9])
+	if isTrue {
+		log.Println("isTrue is:", isTrue)
+	} else {
+		log.Println("isTrue is:", isTrue)
+	}
 }
