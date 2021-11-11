@@ -3,11 +3,11 @@ package main
 import "log"
 
 func main() {
-	var mySlice []string
+	var mySlice []int
 
-	mySlice = append(mySlice, "Stephen")
-	mySlice = append(mySlice, "Stephen")
-	mySlice = append(mySlice, "Stephen")
+	mySlice = append(mySlice, 5)
+	mySlice = append(mySlice, 1)
+	mySlice = append(mySlice, 3)
 
 	log.Println(mySlice)
 }
