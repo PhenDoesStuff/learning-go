@@ -12,7 +12,7 @@ func main() {
 	saySomething("xxx") // Which s is this going to refer to?
 }
 
-func saySomething(s string) (string, string) {
+func saySomething(s3 string) (string, string) {
 	log.Println("s from the saySomething func is", s)
-	return s, "World"
+	return s3, "World"
 }
