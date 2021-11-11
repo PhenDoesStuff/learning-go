@@ -1,22 +1,13 @@
 package main
 
-import (
-	"log"
-)
+import "log"
+
+var s = "seven"
 
 func main() {
-	var myString string
-	myString = "Green"
-
-	log.Println("myString is set to", myString)
-	changeUsingPointer(&myString)
-	log.Println("After func call myString is set to", myString)
-
+	log.Println(s)
 }
 
-func changeUsingPointer(s *string) {
-	log.Println("s is set to", s)
-	log.Println("*s is set to", *s)
-	newValue := "Red"
-	*s = newValue
+func saySomething(s string) (string, string) {
+	return s, "World"
 }
