@@ -2,20 +2,12 @@ package main
 
 import "log"
 
-type User struct {
-	FirstName string
-	LastName string
-}
-
 func main() {
-	myMap := make(map[string]User)
+	var mySlice []string
 
-	me := User {
-		FirstName: "Stephen",
-		LastName: "Montague",
-	}
+	mySlice = append(mySlice, "Stephen")
+	mySlice = append(mySlice, "Stephen")
+	mySlice = append(mySlice, "Stephen")
 
-	myMap["me"] = me
-
-	log.Println(myMap["me"].FirstName)
+	log.Println(mySlice)
 }
