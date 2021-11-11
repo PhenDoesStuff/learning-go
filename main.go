@@ -3,11 +3,10 @@ package main
 import "log"
 
 func main() {
-	isTrue := true
+	myNum := 100
+	isTrue := false
 
-	if isTrue {
-		log.Println("isTrue is:", isTrue)
-	} else {
-		log.Println("isTrue is:", isTrue)
+	if myNum > 99 && isTrue {
+		log.Println("myNum is greater than 99 and isTrue is set to true")
 	}
 }
