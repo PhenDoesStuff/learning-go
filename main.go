@@ -24,7 +24,14 @@ func main() {
 		Breed: "Mutt",
 	}
 
+	gorilla := Gorilla{
+		Name: "Fluffy",
+		Color: "Grey",
+		NumberOfTeeth: 42,
+	}
+
 	PrintInfo(&dog)
+	PrintInfo(&gorilla)
 }
 
 func PrintInfo(a Animal) {
@@ -37,4 +44,12 @@ func (d *Dog) Says() string {
 
 func (d *Dog) NumberOfLegs() int {
 	return 4
+}
+
+func (d *Gorilla) Says() string {
+	return "Rawr"
+}
+
+func (d *Gorilla) NumberOfLegs() int {
+	return 2
 }
