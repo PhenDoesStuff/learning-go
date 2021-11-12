@@ -6,11 +6,20 @@ import (
 	"github.com/stephenmontague/learning-go/helpers"
 )
 
+const numPool = 10000
+
+func CalculateValue(intChan chan int) {
+	randomNumber := helpers.RandomNumber(numPool)
+	intChan <- randomNumber
+}
+
 func main() {
-	log.Println("Hello")
+	intChan := make(chan int)
+	defer close(intChan)
 
-	var myVar helpers.SomeType
-	myVar.TypeName = "Some name"
+	go CalculateValue(intChan)
+	
+	num := <- intChan
 
-	log.Println(myVar.TypeName)
+	log.Println(num)
 }
