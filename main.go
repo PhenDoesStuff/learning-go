@@ -1,22 +1,40 @@
 package main
 
-import "log"
+import "fmt"
+
+type Animal interface {
+	Says() string
+	NumberOfLegs() int
+}
+
+type Dog struct {
+	Name  string
+	Breed string
+}
+
+type Gorilla struct {
+	Name          string
+	Color         string
+	NumberOfTeeth int
+}
 
 func main() {
-	type User struct {
-		FirstName string
-		LastName  string
-		Email     string
-		Age       int
+	dog := Dog{
+		Name:  "Pocus",
+		Breed: "Mutt",
 	}
 
-	var users []User
-	users = append(users, User{"John", "Smith", "John@Smith.com", 30})
-	users = append(users, User{"Mary", "Jones", "Mary@Jones.com", 25})
-	users = append(users, User{"Sally", "Brown", "Sally@Brown.com", 12})
-	users = append(users, User{"Alex", "Anderson", "Alex@Anderson.com", 17})
+	PrintInfo(dog)
+}
 
-	for _, l := range users {
-		log.Println(l.FirstName, l.LastName, l.Email, l.Age)
-	}
+func PrintInfo(a Animal) {
+	fmt.Println("This animal says", a.Says(), "and has", a.NumberOfLegs(), "legs")
+}
+
+func (d Dog) Says() string {
+	return "Woof"
+}
+
+func (d Dog) NumberOfLegs() int {
+	return 4
 }
