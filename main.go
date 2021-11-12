@@ -1,11 +1,16 @@
 package main
 
-import "log"
+import (
+	"log"
+)
 
 func main() {
-	animals := []string {"dog", "fish", "horse", "cow", "cat"}
+	animals := make(map[string]string)
 
-	for i, animal := range animals {
-		log.Println(i, animal)
+	animals["dog"] = "fido"
+	animals["cat"] = "fluffy"
+
+	for _, animal := range animals {
+		log.Println(animal)
 	}
 }
