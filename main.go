@@ -10,7 +10,7 @@ func main() {
 	animals["dog"] = "fido"
 	animals["cat"] = "fluffy"
 
-	for _, animal := range animals {
-		log.Println(animal)
+	for animalType, animal := range animals {
+		log.Println(animalType, animal)
 	}
 }
